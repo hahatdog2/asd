@@ -1,0 +1,436 @@
+/* generalcss */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: rgb(221, 221, 221);
+    position: relative;
+    min-height: 100vh;
+}
+
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    padding-bottom: 5rem;   
+    min-height: calc(100vh - 96px -16px);
+}
+
+/* Main section css */
+
+.source {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.4rem;
+    font-size: 0.7rem;
+}
+
+.youtube-container {
+    display: flex;
+    padding-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0.8rem 0.8rem 0.8rem;
+}
+
+
+.profile-container {
+    display: flex;
+    padding-left: 6rem;
+    margin-bottom: 2rem;
+}
+
+
+.profile-pic-container img {
+    object-fit: cover;
+    width: 60%;
+    height: 60%;
+    max-width: 300px;
+    max-height: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.student-name {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.student-description {
+    font-size: 0.7rem;
+}
+
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    margin-left: 6rem;
+    border-radius: 50px;
+    padding: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(74, 197, 238, 0.793);
+    margin-top: 1rem;
+}
+
+.answers {
+    display: none;
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+
+.answers:target {
+    display: block;
+}
+
+.ha,
+.has {
+    text-decoration: none;
+    color: black;
+}
+
+/*  Animation  */
+
+@keyframes run {
+    from{ transform: translateX(-2500px)}
+    to{ transform: translateX(1500px);}
+}
+
+/* hover */
+
+.facebook:hover,
+.gmail:hover,
+.menu-pic-a img:hover {
+    transform: rotate(360deg);
+    background-color: rgba(245, 245, 245, 0.394);
+}
+
+.facebook,
+.gmail,
+.menu-pic-a img {
+    transition: background 1s, transform 1s;
+}
+
+.college:active,
+.career:active,
+.about:active,
+.close-button:active {
+    background-color: gray;
+    color: white;
+}
+
+.college:hover,
+.career:hover,
+.about:hover,
+.close-button:hover {
+    background-color: rgba(195, 193, 193, 0.759);
+    color: white;
+    margin: 0.2em;
+    transition: 1s;
+}
+
+/* Header css */
+
+.header {
+    display: flex;
+    position: fixed;
+    background-color: lightblue;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-height: 65px;
+    justify-content: end;
+    align-items: center;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    z-index: 1;
+}
+
+.header-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.college,
+.career {
+    padding-right: 20px;
+}
+
+.about {
+    padding-right: 100px;
+}
+
+.college-bar,
+.career-bar,
+.about-bar {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 23px;
+    padding-bottom: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.college-bar {
+    background-color: gray;
+}
+
+.menu {
+    padding-right: 40px;
+}
+
+.toga-pic {
+    animation-name: run;
+    animation-duration: 30s;
+    animation-delay: 15s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(cubic-bezier(.05,.92,1,-0.33));
+}
+
+.book-pic {
+    animation-name: run;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: cubic-bezier(cubic-bezier(.05,.92,1,-0.33));
+}
+
+/* Menu */
+
+.menu {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-bar {
+    display: none;
+    text-decoration: none;
+    position: absolute;
+    left: -50px;
+}
+
+.menu img {
+    cursor: pointer;
+}
+
+.nav-bar:target {
+    display: flex;
+    text-decoration: none;
+}
+
+.close-button {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-decoration: none;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.college,
+.career,
+.about {
+    border-top-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.close-button {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.college:active {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Left-section css */
+
+.left-section {
+    display: flex;
+    position: fixed;
+    background-color: gray;
+    top: 65px;
+    left: 0;
+    bottom: 0;
+    width: 75px;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.facebook {
+    width: 50px;
+    height: 50px;
+}
+
+.gmail {
+    width: 40px;
+    height: 40px;
+    object-fit: fill;
+}
+
+.facebook-link {
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.gmail-link {
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+/* Footer css */
+
+.bottom-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: lightpink;
+    color: black;
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.soc-med {
+    display: none;
+    margin-left: 3rem;
+}
+
+.soc-med img{
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+/* mobile responsive css */
+@media (max-width: 767px) {
+
+    .left-section {
+        display: none;
+    }
+
+    a {
+        font-size: 0.8rem;
+    }
+
+    .welcome-text {
+        padding: 0;
+    }
+
+    .name {
+        margin-bottom: 5px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    
+    .description,
+    .time {
+        margin-top: 5px;
+        font-size: 8px;
+    }
+
+    .questions-container {
+        margin: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .profile-container {
+        padding: 0;
+        margin: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .answers {
+        margin-left: 2rem;
+    }
+
+    .menu {
+        padding: 0;
+    }
+
+    .nav-bar {
+        left: -6rem;
+    }
+
+    .soc-med {
+        display: flex;
+        margin-left: 0;
+    }
+
+    .soc-med img{
+        width: 1.4rem;
+        margin-right: 0.5rem;
+    }
+
+    .bottom-section {
+        justify-content: space-around;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 0.5rem;
+    }
+}
+
+
+@media (min-width: 768) and (max-width: 1023px) {
+
+
+
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+    .main-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+
+}
+
+@media (min-width: 1601px) and (max-width: 3000px) {
+    .main-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+
+}

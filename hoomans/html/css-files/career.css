@@ -1,0 +1,532 @@
+/* generalcss */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    /*background-color: rgb(221, 221, 221);*/
+    background-image: linear-gradient(to right, rgba(183, 180, 180, 0.667), rgb(64, 64, 64));
+    min-height: 100vh;
+    position: relative;
+}
+
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main section css */
+
+.welcome-text {
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 6rem;
+}
+
+.to-text,
+.welcome {
+    color: white;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.to-text {
+    padding-left: 100px;
+    font-size: 30px;
+    margin-top: 1.3rem;
+}
+
+.welcome {
+    font-size: 55px;
+    margin-bottom: 0;
+    margin-top: 1.3rem;
+}
+
+.electronics-pic {
+    width: 100%;
+    object-fit:fill;
+    background-color: gray;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 50px;
+    border-radius: 35px;
+    margin: 10px 0px 0px 10px;
+
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+    padding-left: 80px;
+    padding-right: 25px;
+    padding-top: 15rem;
+    margin-top: 10px;
+    padding-bottom: 5rem;   
+    min-height: calc(100vh - 96px -16px);
+}
+
+/* hover */
+
+.facebook:hover,
+.gmail:hover,
+.menu-pic-a img:hover {
+    transform: rotate(360deg);
+    background-color: rgba(245, 245, 245, 0.394);
+}
+
+.facebook,
+.gmail,
+.menu-pic-a img {
+    transition: background 1s, transform 1s;
+}
+
+.boys-grid:hover {
+    box-shadow: 0.8em 0.8em 0.2em rgba(173, 216, 230);
+    border: none;
+    transition: 0.5s;
+}
+
+.boys-grid:active {
+    box-shadow: none;
+    border: none;
+    transition: 0s;
+}
+
+.college:active,
+.career:active,
+.about:active,
+.close-button:active {
+    background-color: gray;
+    color: white;
+}
+
+.college:hover,
+.career:hover,
+.about:hover,
+.close-button:hover {
+    background-color: rgba(195, 193, 193, 0.759);
+    color: white;
+    margin: 0.2em;
+    transition: 1s;
+}
+
+.charlie-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0.3rem;
+
+}
+
+.basic-info {
+    margin-left: 0.5rem;
+}
+
+.name {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.description,
+.time {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.time {
+    text-align: end;
+}
+
+.boys-grid {
+    display: grid;
+    background-color: white;
+    border-width: 0.33rem;
+    border-style: solid;
+    border-color: lightblue;
+    cursor: pointer;
+}
+
+/*  Animation  */
+
+@keyframes run {
+    from{ transform: translateX(-2500px)}
+    to{ transform: translateX(1500px);}
+}
+
+@keyframes karrirs {
+    form{ transform: translateY(0px);}
+    to{ transform: translateY(12.3rem);}
+}
+
+.hatdogs {
+    display: flex;
+    position: relative;
+    top: 0;
+    flex-direction: row;
+    column-gap: 20px;
+    padding-left: 26px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.letter-k,
+.letter-a,
+.letter-r-one,
+.letter-r-two,
+.letter-i,
+.letter-r-three,
+.letter-s {
+    display: flex;
+    background-color: wheat;
+    justify-content: center;
+    animation-name: karrirs;
+    animation-fill-mode: both;
+    font-family: ubuntu, arial;
+}
+
+.letter-k {
+    animation-duration: 2s;
+}
+
+.letter-a {
+    animation-duration: 4s;
+}
+
+.letter-r-one {
+    animation-duration: 6s;
+}
+
+.letter-r-two {
+    animation-duration: 8s;
+}
+
+.letter-i {
+    animation-duration: 9s;
+}
+
+.letter-r-three {
+    animation-duration: 10s;
+}
+
+.letter-s {
+    animation-duration: 11s;
+}
+/* Header css */
+
+.header {
+    display: flex;
+    position: fixed;
+    background-color: lightblue;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-height: 65px;
+    justify-content: end;
+    align-items: center;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    z-index: 1;
+}
+
+.header-menu {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s;
+}
+
+.college,
+.career,
+.about {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 10px;
+}
+
+.college p,
+.career p,
+.about p {
+    font-size: 2rem;
+}
+
+.close-button {
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+.header-menu {
+    padding-right: 40px;
+    transition: transform 1s;
+}
+
+.toga-pic {
+    animation-name: run;
+    animation-duration: 30s;
+    animation-delay: 15s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(cubic-bezier(.05,.92,1,-0.33));
+}
+
+.book-pic {
+    animation-name: run;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: cubic-bezier(cubic-bezier(.05,.92,1,-0.33));
+}
+
+/* Menu */
+
+.menu {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-bar {
+    display: none;
+    text-decoration: none;
+    position: absolute;
+    left: -50px;
+}
+
+.menu img {
+    cursor: pointer;
+}
+
+.nav-bar:target {
+    display: flex;
+    text-decoration: none;
+}
+
+.close-button {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-decoration: none;
+    justify-content: space-around;
+    gap: 5px;
+    transition: transform 1s;
+}
+
+
+.college,
+.career,
+.about {
+    border-top-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+.college:active {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Left-section css */
+
+.left-section {
+    display: flex;
+    position: fixed;
+    background-color: gray;
+    top: 65px;
+    left: 0;
+    bottom: 0;
+    width: 75px;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.facebook {
+    width: 50px;
+    height: 50px;
+}
+
+.gmail {
+    width: 40px;
+    height: 40px;
+    object-fit: fill;
+}
+
+.facebook-link {
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.gmail-link {
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+
+.bottom-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: lightpink;
+    color: black;
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.soc-med {
+    display: none;
+    margin-left: 3rem;
+}
+
+.soc-med img{
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+/* mobile responsive css */
+@media (max-width: 767px) {
+    .main-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        padding-top: 15rem;
+        margin-left: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-bottom: 5rem;
+
+    }
+    
+
+    .left-section {
+        display: none;
+    }
+
+    .welcome-text {
+        padding: 2rem 0 0 0;
+    }
+
+    .name {
+        margin-bottom: 5px;
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+    
+    .description {
+        font-size: 0.5rem;
+    }
+
+    .basic-info {
+        margin: 0.1rem 0.5rem;
+    }
+
+    .charlie-info {
+        margin: 0;
+    }
+
+    .time {
+        margin-top: 0.5rem;
+        text-align: end;
+        font-size: 0.5rem;
+    }
+
+    .header-menu {
+        padding: 0;
+    }
+
+    .nav-bar {
+        left: -5rem;
+    }
+
+    .college:active,
+    .career:active,
+    .about:active,
+    .close-button:active {
+        background-color: gray;
+        color: white;
+    }
+
+    .boys-grid {
+        border: none;
+        filter: drop-shadow(0.3em 0.3em 0.2em rgba(173, 216, 230));
+    }
+    
+    .boys-grid:active {
+        margin: 0.3em;
+        filter: drop-shadow(0 0 100em);
+    }
+
+    .soc-med {
+        display: flex;
+        margin-left: 0;
+    }
+
+    .soc-med img{
+        width: 0.9rem;
+        margin-right: 0.5rem;
+    }
+
+    .bottom-section {
+        justify-content: space-around;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+    .main-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .soc-med {
+        display: none;
+    }
+}
+
+@media (min-width: 1601px) and (max-width: 3000px) {
+    .main-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .soc-med {
+        display: none;
+    }
+}
